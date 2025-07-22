@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load crispy_forms_tags%}
+{% block content %}
+
+  <div class="border mb-3 p-4">
+    <h4  class="border-bottom pb-2 mb-3"> تم تسجيل الخروج بنجاح</h4>
+   
+       <p> شكرًا لزيارتك, لتسجيل الدخول مره أخرى<a class="blue-link" href="{% url 'login' %}">   اضغط هنا  </a></p>
+  </div>
+  
+{% endblock content %}

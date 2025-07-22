@@ -1,0 +1,9 @@
+<ul class="lis-group-flush latest-posts">
+    {% for post in l_posts %}
+        <li class="list-group-item latest-posts-item">
+         <a class="black-link" href="{% url 'detail' post.id %}"> {{post.title}}</a>
+           
+
+        </li>
+    {% endfor %}
+</ul>

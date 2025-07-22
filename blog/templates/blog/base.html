@@ -1,0 +1,158 @@
+{% load static %}
+{% load post_tag %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% if title%}
+        <title>مدونة| {{title}}</title>
+
+        {% else %}
+        <title>مدونة</title>
+
+
+
+        {% endif %}
+            <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+            <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}">
+
+    </head>
+
+    <body>
+        <header>
+<!--Start navbar-->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
+              <div class="container-fluid">
+                   <a class="navbar-brand text-dark" href="#">
+                    
+                    <img src="{%static 'blog/images/favicon-32x32.png' %}" alt="logo">
+                    مدونة</a>
+                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+        </button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mb-2 mb-lg-0">
+                      <li class="nav-item">
+                       <a class="nav-link active text-dark" aria-current="page" href="{% url 'home'%}">الرئيسية</a>
+                 </li>
+              
+
+        <li class="nav-item">
+                 <a class="nav-link text-dark" href="{% url 'about'%}">من أنا</a>
+                 
+          </li>
+      </ul>
+            <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if user.is_authenticated %}
+                <li class="nav-link"> <a class="black-link" href="{% url 'new_post' %}">تدوينة جديدة </a></li>
+                <li class="nav-link"> <a class="black-link" href="{% url 'profile' %}">الملف الشخصي </a></li>
+                <li class="nav-link"> <a style="color: red; text-decoration: none;" href="{% url 'logout' %}">تسجيل خروج </a></li> 
+        {% else %}
+                <li class="nav-link"> <a class="black-link" href="{% url 'login' %}">تسجيل دخول</a></li>
+                <li class="nav-link"> <a class="black-link" href="{% url 'register' %}">تسجيل </a></li>
+        {% endif %}
+                
+     </ul>
+    </div>
+  </div>
+</nav>
+      <!--End navbar-->
+  </header>
+
+    <section> 
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-8">
+                        {% block content %}
+
+                        {% endblock content%}
+
+                    </div>
+                 <!--Start Sidebar-->
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <h4 class="text-center bg-secondary text-light p-2">آخر التدوينات</h4>
+                            {% latest_posts %}
+                        </div>
+
+                     <div class="card mb-3">
+                            <h4 class="text-center bg-secondary text-light p-2">آخر التعليقات</h4>
+                            {% latest_comments %}
+          
+                        </div>
+                    </div>
+                 <!--End Sidebar-->
+                </div>
+            </div>
+    </section>
+
+    <footer class="bg-secondary">
+        <div class="container-fluid">
+             <div class="row"> 
+                <div class="col-md">
+                    <div class="card-group mt-3">
+                        <div class="card m-3">
+                            <h4 class="card-title text-center border-bottom p-2 m-3">من أنا </h4>
+                            <div class="card-body">
+                                <div class="text-center"> 
+                                     <img src="{%static 'blog/images/favicon.ico' %}" alt="logo"></div>
+                                                                         طالبة نظم معلومات حاسوبية.  
+أحب تحويل الأفكار إلى مشاريع تقنية حقيقية، وأشارك هنا بعضاً من رحلتي وتجربتي في البرمجة وتطوير الويب 
+
+                              
+                            </div>
+                        </div>
+                        <div class="card m-3">
+                            <h4 class="card-title text-center border-bottom p-2 m-3">مواقع هامة </h4>
+                            <div class="card-body">
+                                <ul>
+                                    <li><a class="black-link" href="https://docs.djangoproject.com/en/5.2/"> مستندات Django الرسمية</a></li>
+                                    <li><a class="black-link" href="https://www.coursera.org/">منصة كورسيرا - coursera </a></li>
+                                    <li><a class="black-link" href="https://www.w3schools.com">W3Schools</a></li>
+
+                                </ul>
+                    </div>
+                </div>
+                <div class="card m-3">
+                            <h4 class="card-title text-center border-bottom p-2 m-3">وسائل التواصل الاجتماعي</h4>
+                            <div class="card-body text-center">
+                                <h4>
+                                  <a href="https://www.facebook.com/" class="text-secondary"><i class="fab fa-facebook"></i></a>
+                                  <a href="https://www.facebook.com/" class="text-secondary"><i class="fab fa-twitter"></i></a>
+                                  <a href="https://www.youtube.com/" class="text-secondary"><i class="fab fa-youtube"></i></a>
+                                  <a href="https://web.telegram.org/a/" class="text-secondary"><i class="fab fa-telegram"></i></a>
+                                  <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="text-secondary"><i class="fab fa-linkedin"></i></a>
+
+                                </h4>
+                                
+               </div>
+              </div>                              
+            </div>
+            <div class="col-md text-center p-2">
+            <small class="text-light"> شهد المالكي – مدونة شخصية | جميع الحقوق محفوظة &copy;</small>
+            </div>
+        </div>
+     </div>
+        
+       
+
+    </footer>
+
+        <script src="{% static 'blog/js/jquery-3.3.1.slim.min.js' %}"></script>
+        <script src="{% static 'blog/js/popper.min.js' %}"></script>
+        <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'blog/js/bundle.min.js' %}"></script>
+        <script src="{% static 'blog/js/fontawesome-all.min.js' %}"></script>
+
+
+
+
+    </body>
+
+
+
+
+</html>

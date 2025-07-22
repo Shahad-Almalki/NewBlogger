@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Tajawal';
+    src: url("C:\Users\ACER\Desktop\Blogger\src\blog\static\blog\fonts\Tajawal-Regular.ttf");
+
+}
+
+html, body{
+direction: rtl;
+text-align: right;
+}
+
+body{
+    font-family: 'Tajawal', sans-serif;
+}
+
+.dropdown-menu .dropdown-item{
+ text-align: right;
+
+}
+
+.bg-secondary{
+    background-color:rgb(229, 135, 149) !important;
+}
+
+.bg-light{
+    background-color:#f7d7d7 !important;
+}
+
+a.black-link {
+    color: black !important;
+    text-decoration:none !important;
+}
+
+a.blue-link {
+    color: blue;
+    text-decoration:none !important;
+
+}
+
+.post{
+    border: 1px solid ;
+}
+
+.latest-posts , .latest-comments{
+    padding: 0 15px;
+}
+
+.latest-posts .latest-posts-item, .latest-comments .latest-comment-item{
+    padding: 4px;
+}
+
+.latest-posts li:first-child, .latest-comments li:first-child{
+    border: 3;
+}
+
+.latest-posts li:last-child, .latest-comments li:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.comment{
+    background-color: #f8f8f8;
+    border: 2px dashed #CCC;
+}
+
+.btn-editing{
+    float: left !important;
+}
