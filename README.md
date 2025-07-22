@@ -7,7 +7,6 @@ A simple and elegant blog platform built with Django. This project showcases cor
 ![Django](https://img.shields.io/badge/Django-5.x-green?logo=django)
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 
