@@ -1,31 +1,84 @@
-# Blogger - Django Blog Project
+# 📝 Blogger – Django Blog Platform
 
-A simple blog platform built with Django.
+A simple and elegant blog platform built with Django. This project showcases core web development features like creating, editing, and displaying blog posts with support for user comments, authentication, and responsive design.
+
+---
+
+![Django](https://img.shields.io/badge/Django-5.x-green?logo=django)
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+---
+
+## 🌐 Live Preview
+
+> _You can add a deployed link here if available_
+
+---
 
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="homepage1.png" alt="Homepage 1" width="48%">
-  <img src="homepage2.png" alt="Homepage 2" width="48%">
+  <img src="homepage1.png" alt="Homepage Screenshot" width="48%">
+  <img src="homepage2.png" alt="Post Detail Screenshot" width="48%">
 </p>
 
+---
+
 ## 🚀 Features
-- Create, update, delete blog posts
-- View post details
-- Comment on posts and edit their own comments
-- Filter posts by author or category
-- Admin dashboard for full management
 
-## 🛠 Tech
-- Django 5.x
-- Python 3.12
-- Bootstrap 5
-- Crispy Forms (Bootstrap 5)
+-  Create, update, and delete blog posts (CRUD)
+-  User registration, login, and logout
+-  Each user can manage their own posts
+-  Add, edit, and delete comments on posts
+-  Filter posts by category or author
+-  Automatically display latest posts and comments
+-  Responsive and clean UI using Bootstrap 5
+-  Organized views using Django class-based views (CBVs)
+-  Admin panel with full control over posts, users, and comments
+-  Custom static files (CSS + JS)
+-  CSRF protection and form validation
+-  Integrated post detail pages with clean layout
 
-## ▶️ How to Run
-1. Clone the repo & navigate to project folder  
-2. Create virtual environment & activate it  
-3. Install dependencies:  
-   `pip install -r requirements.txt`  
-4. Run the development server:  
-   `python manage.py runserver`
+---
+
+## 🧰 Tech Stack
+
+- **Framework:** Django 5.x
+- **Language:** Python 3.12
+- **Frontend:** HTML, Bootstrap 5
+- **Forms:** Django Crispy Forms (Bootstrap5)
+- **Database:** SQLite3
+
+---
+
+## 🛠️ Getting Started
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/Shahad-Almalki/NewBlogger.git
+   cd NewBlogger/src
+
+2. **Create & activate virtual environment**
+python -m venv env
+env\Scripts\activate
+
+3. **Install dependencies**
+pip install -r requirements.txt
+
+4. **Apply migrations & run**
+
+python manage.py migrate
+python manage.py runserver
+
+
+5. **📁 Folder Structure**
+src/
+├── blog/             # Blog app
+├── user/             # User registration & login
+├── templates/        # HTML templates
+├── static/           # CSS, JS, images
+├── manage.py         # Django project entry point
+├── README.md         # Project documentation
+└── requirements.txt  # Dependencies
