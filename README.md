@@ -70,13 +70,4 @@ A simple and elegant blog platform built with Django. This project showcases cor
 
 
 5. **Folder Structure**
-   php
-
-src/
-├── blog/             # Blog app
-├── user/             # User registration & login
-├── templates/        # HTML templates
-├── static/           # CSS, JS, images
-├── manage.py         # Django project entry point
-├── README.md         # Project documentation
-└── requirements.txt  # Dependencies
+  <pre> ```bash src/ ├── blog/ # Blog app ├── user/ # User registration & login ├── templates/ # HTML templates ├── static/ # CSS, JS, images ├── manage.py # Django project entry point ├── README.md # Project documentation └── requirements.txt# Dependencies ``` </pre>
