@@ -11,12 +11,6 @@ A simple and elegant blog platform built with Django. This project showcases cor
 
 ---
 
-## 🌐 Live Preview
-
-> _You can add a deployed link here if available_
-
----
-
 ## 🖼️ Preview
 
 <p align="center">
@@ -61,19 +55,23 @@ A simple and elegant blog platform built with Django. This project showcases cor
    cd NewBlogger/src
 
 2. **Create & activate virtual environment**
+   ```bash
 python -m venv env
 env\Scripts\activate
 
 3. **Install dependencies**
+   ```bash
 pip install -r requirements.txt
 
 4. **Apply migrations & run**
-
+   ```bash
 python manage.py migrate
 python manage.py runserver
 
 
-5. **📁 Folder Structure**
+5. **Folder Structure**
+php
+
 src/
 ├── blog/             # Blog app
 ├── user/             # User registration & login
