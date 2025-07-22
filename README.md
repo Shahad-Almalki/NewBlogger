@@ -4,8 +4,8 @@ A simple blog platform built with Django.
 
 ## 🖼️ Preview
 
-![Homepage Screenshot](screenshots/homepage1.png)
-![Homepage Screenshot](screenshots/homepage2.png)
+![Homepage Screenshot](homepage1.png)
+![Homepage Screenshot](homepage2.png)
 
 ## 🚀 Features
 - Create, update, delete blog posts
