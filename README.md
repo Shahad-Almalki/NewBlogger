@@ -56,21 +56,21 @@ A simple and elegant blog platform built with Django. This project showcases cor
 
 2. **Create & activate virtual environment**
    ```bash
-python -m venv env
-env\Scripts\activate
+   python -m venv env
+   env\Scripts\activate
 
 3. **Install dependencies**
    ```bash
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. **Apply migrations & run**
    ```bash
-python manage.py migrate
-python manage.py runserver
+   python manage.py migrate
+   python manage.py runserver
 
 
 5. **Folder Structure**
-php
+   php
 
 src/
 ├── blog/             # Blog app
